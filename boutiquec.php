@@ -1,4 +1,8 @@
-<?php require_once("menu.php")?>
+<?php 
+require_once("menu.php");
+require_once("functions.php");
+var_dump(get_page_by_ID(1))
+?>
 <div class="boutique-container">
             <div class="menu-filter"></div>
             <div class="card-list">
