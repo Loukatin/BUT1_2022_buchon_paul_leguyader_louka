@@ -1,5 +1,11 @@
-h1 {
-    color: blue;
-    background-color: rgb(255, 0, 0);
-  }
-  
+/* Carré centrale */
+
+.carre {
+  width: 100%;
+  height: 30px;
+  width: 30px;
+  background: #3C9FB5;
+  -webkit-transform: rotate(5deg); 
+}
+
+
