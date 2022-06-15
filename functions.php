@@ -1,6 +1,6 @@
 <?php
 require_once("db/db.php");
-function get_page_by_ID($id){
+function get_boutiques(){
         global $DB;
         $sql = "SELECT * FROM boutiques b JOIN adresses a on b.adresse_id = a.adresse_id";
     try {
