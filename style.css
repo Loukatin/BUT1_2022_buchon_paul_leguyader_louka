@@ -1,3 +1,14 @@
+/* Carré centrale */
+
+.carre {
+  width: 100%;
+  height: 30px;
+  width: 30px;
+  background: #3C9FB5;
+  -webkit-transform: rotate(5deg); 
+}
+
+
 html{
   padding: 0px;
   margin: 0px;
@@ -81,4 +92,5 @@ h2{
 .card-illustration p{
   margin: 0px;
 }
+  
   
