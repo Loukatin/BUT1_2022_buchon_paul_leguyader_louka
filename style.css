@@ -8,8 +8,14 @@ body{
   padding: 0px;
 
 }
-
-.top-nav{
+.boutique-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.top-nav{ 
   width: 100%;
   height: 50px;
   background: #3C9FB5;
@@ -19,8 +25,60 @@ body{
   margin:0px;
   font-family: 'Inter';
   font-style: normal;
-  font-size: 48px;
+  font-size: 38px;
   color: #ffffff ;
 }
 
+h2{
+  margin: 15px  0 0 100px;
+  font-family: 'Harlow Solid Italic';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 38px;
+  color: #3C9FB5;
+}
+
+.menu-filter{
+  width: 80%;
+  height: 50px;
+  background: #3C9FB5;
+  border-radius: 100px;
+}
+
+.card-list{
+  display: flex;
+  align-items: flex-start;
+  width: 90%;
+  /* background: #b7d1d6; */
+
+}
+
+.card{
+  width: 20%;
+  height: 523px;
+  margin: 3% 2.5% 4% 2.5%;
+  background: #F7F7F7;
+  box-shadow: 4px 4px 23px -4px rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card-illustration{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.card-illustration img{
+  width: 80%;
+  border-radius: 10000px;
+  filter: contrast(0.5);
+}
+
+.card-illustration p{
+  margin: 0px;
+}
   
