@@ -60,6 +60,7 @@ h2{
   display: flex;
   align-items: flex-start;
   width: 90%;
+  flex-wrap: wrap;
   /* background: #b7d1d6; */
 
 }
@@ -89,8 +90,81 @@ h2{
   filter: contrast(0.5);
 }
 
-.card-illustration p{
+.card p{
   margin: 0px;
 }
+
+.card-titles{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  color: #B1B1B1;
+}
+
+.titles-div{
+  display: flex;
+  flex-direction: column;
+  padding: 0 2% 0 2%;
+}
+
+
+.boutique-container form{
+  width: 90%;
+}
+
+.add-boutique{
+  width: 90%;
+  background: #3C9FB5;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+
+}
   
-  
+.add-boutique p{
+  margin: 0px 15px 0 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  color: #FFFFFF;
+  white-space: nowrap; 
+}
+.add-boutique input{
+  width: 100%;
+  border: none;
+  border-radius: 1000px;
+  margin-right: 20px;
+}
+
+.line{
+  width: 100%;
+  display: flex;
+  margin: 10px 0 10px 0;
+}
+
+.boutique-vendeur{
+  width: 100%;
+  height: 256px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.boutique-vendeur .card-illustration{
+  width: auto ;
+  height: 80%;
+  margin-left:2%;
+}
+.boutique-vendeur .card-illustration img{
+  height: 100%;
+  width: auto;
+}
+
+.info{
+  width: 100%;
+}
+
+
