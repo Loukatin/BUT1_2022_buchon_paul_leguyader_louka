@@ -71,7 +71,7 @@ if(count($_POST)>0){
                             </a>
                             <div class='delete'>
                                 <form name='formulaire' class='delete-form' action='' method='POST'>  
-                                    <input type='hidden' type='numb' name='delete' value='$index'></input>
+                                    <input type='hidden' type='numb' name='delete' value='".$boutique['boutique_id']."'></input>
                                 </form>
                             </div>
                         </div>
