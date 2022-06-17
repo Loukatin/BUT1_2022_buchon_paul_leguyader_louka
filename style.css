@@ -227,3 +227,39 @@ h2{
   align-items: center;
   flex-direction: column;
 }
+
+.ligne{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.compteur input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Chrome */
+.compteur input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+-webkit-appearance: none;
+margin:0;
+}
+
+/* Opéra*/
+.compteur input::-o-inner-spin-button,
+input::-o-outer-spin-button { 
+-o-appearance: none;
+margin:0
+}
+
+.compteur{
+  display: flex;
+  justify-content: center;
+}
+.bouton{
+  background-color: darkblue;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}

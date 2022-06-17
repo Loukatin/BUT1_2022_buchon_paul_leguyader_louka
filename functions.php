@@ -79,5 +79,51 @@ catch (Exception $ex) {
     echo $ex->getMessage();
 }
 }
+
+
+function compte_gâtrerie($idb,$idc){
+    global $DB;
+    $idc = intval($idc);
+    $sql = "SELECT count(confiserie_id) FROM `stocks` WHERE confiserie_id =$idc AND boutique_id = $idb";
+try {
+    $stmt = $DB->prepare($sql);
+    $stmt->execute();
+    $results = $stmt->fetchAll();
+    return $results;
+} 
+catch (Exception $ex) {
+    echo $ex->getMessage();
+}
+}
+
+function ajoute_gâtrerie($idb,$idc){
+    global $DB;
+    $idc = intval($idc);
+    $sql = "INSERT INTO stocks(date_de_peremption, date_de_mise_en_stock, boutique_id, confiserie_id) VALUES (NOW() + INTERVAL 14 DAY, NOW(), $idb, $idc);";
+try {
+    $stmt = $DB->prepare($sql);
+    $stmt->execute();
+    $results = $stmt->fetchAll();
+    return $results;
+} 
+catch (Exception $ex) {
+    echo $ex->getMessage();
+}
+}
+
+function supprime_gâtrerie($idb,$idc){
+    global $DB;
+    $idc = intval($idc);
+    $sql = "INSERT INTO stocks(date_de_peremption, date_de_mise_en_stock, boutique_id, confiserie_id) VALUES (NOW() + INTERVAL 14 DAY, NOW(), $idb, $idc);";
+try {
+    $stmt = $DB->prepare($sql);
+    $stmt->execute();
+    $results = $stmt->fetchAll();
+    return $results;
+} 
+catch (Exception $ex) {
+    echo $ex->getMessage();
+}
+}
   ?>
 
