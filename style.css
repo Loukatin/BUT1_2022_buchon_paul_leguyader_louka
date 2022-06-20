@@ -1,11 +1,11 @@
 
 .conteneur{
-  display: flex;
+display: flex;
 justify-content: center;
 align-items: center;
 height: 100vh;
-background-image: url("background.webp");
-background-size: 100% 100%;
+background:center/100% no-repeat url("background.webp")  #fff;
+/* filter: contrast(0.5); */
 }
 
 .carre{
@@ -30,6 +30,7 @@ background-size: 100% 100%;
   border-radius: 25px;
   height: 74px;
   width: 329px;
+  color: #3C9FB5;
 }
 
 #login{
@@ -73,6 +74,13 @@ body{
   width: 100%;
   height: 50px;
   background: #3C9FB5;
+  padding: 0.3% 3% 0.3% 3%;
+  display: flex;
+  align-items: space;
+}
+.top-nav a{ 
+  text-decoration: none;
+
 }
 
 .top-nav p{
@@ -81,6 +89,9 @@ body{
   font-style: normal;
   font-size: 38px;
   color: #ffffff ;
+  text-decoration:underline;
+
+
 }
 
 h2{
@@ -182,7 +193,7 @@ h2{
   align-items: center;
   flex-direction: column;
   padding: 10px;
-
+  box-shadow: 6px 6px 4px 1px rgba(0, 0, 0, 0.10);
 }
   
 .add-boutique p{
@@ -277,3 +288,25 @@ margin:0
   display: flex;
   justify-content: center;
 }
+.submit-btn{
+  background: #156A7C;
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 22px;
+  color: #FFFFFF;
+}
+
+.pays{
+  border-radius: 100px;
+  border: none;
+  background: white;
+  margin-right: 30px;
+}
+
+#line3 input{
+  margin-right: 10px;
+}
+
+/* .add-boutique div{
+  padding: 0 2% 0 2%;
+} */

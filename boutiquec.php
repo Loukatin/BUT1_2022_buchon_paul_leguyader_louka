@@ -3,6 +3,7 @@ require_once("menu.php");
 require_once("functions.php");
 $boutiques = get_boutiques();
 ?>
+<h2>Choisissez votre boutique</h2>
 <div class="boutique-container">
             <div class="menu-filter"></div>
             <div class="card-list">
