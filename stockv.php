@@ -25,6 +25,7 @@ if(isset($_GET['add'])){
     
 
 ?>
+<h2>Stock de la boutique <?=get_boutiques()[intval($_GET['id'])]['nom']?></h2>
 <div class="boutique-container">
             <div class="menu-filter add-conf">
             <form action="" method="POST">  

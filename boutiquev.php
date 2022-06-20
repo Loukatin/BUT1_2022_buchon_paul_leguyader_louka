@@ -12,6 +12,7 @@ if(count($_POST)>0){
 }
 }
 ?>
+    <h2>Choisissez votre boutique</h2>
         <div class="boutique-container">
             <div class="add-boutique">
                 <form action="boutiquev.php" method="POST">  
@@ -26,12 +27,12 @@ if(count($_POST)>0){
                         <input type="text" id="ville" name="ville" required>
                     </div>
                     <div id="line3" class="line">
-                        <p>N°Rue: </p>
+                        <p>NÂ°Rue: </p>
                         <input type="number" id="nbstreet" name="nbstreet" required>
                         <p>Rue: </p>
                         <input type="text" id="street" name="street" required>
                         <p>Pays: </p>
-                        <select name="pays" id="pet-select">
+                        <select class='pays' name="pays" id="pet-select">
                             <?php 
                                 $already = [];
                                 foreach($boutiques as $index => $boutique){
@@ -41,7 +42,7 @@ if(count($_POST)>0){
                                 }
                             ?>
                         </select>
-                        <input type="submit" value="Ajouter une boutique">
+                        <input class='submit-btn'type="submit" value="Ajouter une boutique">
                     </div>
                 </form>
             </div>

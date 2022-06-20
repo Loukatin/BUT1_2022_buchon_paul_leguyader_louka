@@ -4,6 +4,7 @@ if(isset($_GET['id'])){
     $stock = get_stock_by_id($_GET['id']);
 }
 ?>
+<h2>Stock de la boutique <?=get_boutiques()[intval($_GET['id'])]['nom']?></h2>
 <div class="boutique-container">
             <div class="menu-filter"></div>
             <div class="card-list">
