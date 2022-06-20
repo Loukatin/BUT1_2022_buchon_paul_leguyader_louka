@@ -27,7 +27,7 @@ if(count($_POST)>0){
                         <input type="text" id="ville" name="ville" required>
                     </div>
                     <div id="line3" class="line">
-                        <p>N°Rue: </p>
+                        <p>NÂ°Rue: </p>
                         <input type="number" id="nbstreet" name="nbstreet" required>
                         <p>Rue: </p>
                         <input type="text" id="street" name="street" required>
