@@ -136,6 +136,7 @@ catch (Exception $ex) {
     echo $ex->getMessage();
 }
 }
+
 function liste_gâterie_boutique($idb,$idc){
     global $DB;
     $sql = "SELECT * FROM stocks WHERE `boutique_id` = $idb AND `confiserie_id`= $idc;";
@@ -162,6 +163,47 @@ function supprime_gâtrerie($idb,$idc){
         catch (Exception $ex) {
             echo $ex->getMessage();
         }
+    }
+}
+
+function list_all_user(){
+    global $DB;
+    $sql = "SELECT * from utilisateurs";
+    try {
+        $stmt = $DB->prepare($sql);
+        $stmt->execute();
+        $results = $stmt->fetchAll();
+        return $results;
+    } 
+    catch (Exception $ex) {
+        echo $ex->getMessage();
+    }
+}
+
+function prom_user($id, $role){
+    global $DB;
+    $sql = "UPDATE utilisateurs SET type = '$role' WHERE id=$id";
+    try {
+        $stmt = $DB->prepare($sql);
+        $stmt->execute();
+        $results = $stmt->fetchAll();
+        return $results;
+    } 
+    catch (Exception $ex) {
+        echo $ex->getMessage();
+    }
+}
+function get_user_by_id($id){
+    global $DB;
+    $sql = "SELECT * from utilisateurs where id = $id";
+    try {
+        $stmt = $DB->prepare($sql);
+        $stmt->execute();
+        $results = $stmt->fetchAll();
+        return $results;
+    } 
+    catch (Exception $ex) {
+        echo $ex->getMessage();
     }
 }
 ?>

@@ -12,6 +12,9 @@ if(isset($_POST['login'])&&isset($_POST['password'])){
         }
     }    
 }
+else{
+    session_destroy();
+}
 ?>
         <form action="" method="post" class="form-example">
             <div class="conteneur"> 
