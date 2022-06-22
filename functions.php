@@ -206,6 +206,26 @@ function get_user_by_id($id){
         echo $ex->getMessage();
     }
 }
+function add_user($data){
+    global $DB;
+    if(isset($data['gerant'])){
+        $type = 'gerant';
+    }
+    else{
+        $type = 'client';
+    }
+    $sql = "INSERT INTO utilisateurs(username, password, type, prenom, nom, ddn)
+    VALUES ('".$data['login']."', md5('".$data['password']."'), '$type', '".$data['firstname']."', '".$data['name']."', '".$data['date']."');";
+    try {
+        $stmt = $DB->prepare($sql);
+        $stmt->execute();
+        $results = $stmt->fetchAll();
+        return $results;
+    } 
+    catch (Exception $ex) {
+        echo $ex->getMessage();
+    }
+}
 ?>
 
 

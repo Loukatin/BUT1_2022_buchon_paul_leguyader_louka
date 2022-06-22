@@ -1,30 +1,26 @@
 <?php 
 require_once("header.php");
 require_once("functions.php");
-// if(isset($_POST['login'])&&isset($_POST['password'])){
-//     $_SESSION['session'] = checklogin($_POST['login'],$_POST['password']);
-//     if( $_SESSION['session'] != null){
-//         if( $_SESSION['session']['type'] == 'gerant'){
-//             header("location:boutiquev.php");
-//         }
-//         elseif( $_SESSION['session']['type'] == 'client'){
-//             header("location:boutiquec.php");
-//         }
-//     }    
-// }
-// else{
-//     session_destroy();
-// }
+if(count($_POST)>0){
+    add_user($_POST);
+    // header('location:register.php');
+}
 ?>
-        <form action="" method="post" class="form-example">
-            <div class="conteneur"> 
-                <div class="register- carre">
-                        <input type="text" id="login" name="login" placeholder="Utilisateur" required>
-                        <input type="text" id="password" name="password" placeholder="Mot de passe" required>
-                        <input class="connexion" type="submit" value="Connexion">
-                        <a href='register.php'><p>Connexion</p></a>
-                </div>
-            </div>   
-        </form>
+        <div class="conteneur"> 
+            <div class="register">
+                <form class="register" action="register.php" method="POST"> 
+                    <div class="nom-prenom">
+                        <input type="text" name="name" placeholder="Nom" required>
+                        <input type="text" name="firstname" placeholder="Prénom" required>
+                        <input type="date"  name="date" placeholder="Utilisateur" required>
+                    </div>  
+                    <input type="text"  name="login" placeholder="Utilisateur" required>
+                    <input type="password"  name="password" placeholder="Mot de passe" required>
+                    <input  type="submit" value="Connexion">
+                    <input type="checkbox" name="gerant" value="gerant">
+                    <a href='login.php'><p>Connexion</p></a>
+                </form>
+            </div>
+        </div>   
     </body>
 </html>
