@@ -39,6 +39,7 @@
     background-color: white;
     border: 0;
     border-radius: 25px;
+    color: #3C9FB5;
   
   }
   
@@ -49,17 +50,18 @@
     background-color: white;
     border: 0;
     border-radius: 25px;
+    color: #3C9FB5;
   
   }
   
-  #login{
-
+  #login::placeholder{
+    color: #3C9FB5;
 
   }
 
-  #password{
+  #password::placeholder{
+    color: #3C9FB5;
 
-    
   }
 
   html{
