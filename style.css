@@ -190,6 +190,12 @@ h2{
   justify-content: space-around;
   text-decoration: none;
   color: #B1B1B1;
+  transform: scale(1) ;
+  transition: ease 1s;
+}
+.card:hover{
+  transform: scale(1.02) ;
+  box-shadow: 14px 14px 33px -4px rgba(0, 183, 255, 0.45);
 
 }
 
@@ -203,7 +209,7 @@ h2{
 .card-illustration img{
   width: 80%;
   border-radius: 10000px;
-  filter: contrast(0.5);
+  filter:brightness(90%)  contrast(120%);
 }
 
 .card p{
@@ -228,6 +234,8 @@ h2{
   width: 95%;
 }
 
+
+
 .add-boutique{
   width: 90%;
   background: #3C9FB5;
@@ -240,19 +248,20 @@ h2{
 }
   
 .add-boutique p{
-  margin: 0px 15px 0 0;
+  margin: 0px 0px 0 0;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
   color: #FFFFFF;
   white-space: nowrap; 
+  width: ;
 }
 .add-boutique input{
   width: 100%;
   border: none;
   border-radius: 1000px;
-  margin-right: 20px;
+  margin: 0 50px 0 10px;
 }
 
 .line{
@@ -287,8 +296,18 @@ h2{
   width: 40%;
   display: flex;
   justify-content: center;
-  
 }
+#deletes:hover{
+  animation: trash infinite 0.5s;
+}
+
+@keyframes trash {
+  from   {  -webkit-transform: rotate(0deg);}
+  33% { -webkit-transform: rotate(5deg);}
+  66% { -webkit-transform: rotate(-5deg);}
+  to {-webkit-transform: rotate(0deg);}
+}
+
 .delete{
   width: 5%  ;
 }
@@ -350,10 +369,11 @@ margin:0
   border: none;
   background: white;
   margin-right: 30px;
+  margin-left: 10px;
 }
 
 #line3 input{
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
 
 add-boutique div{
