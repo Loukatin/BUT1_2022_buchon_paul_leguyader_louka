@@ -248,11 +248,12 @@
     width: 100%;
   }
   
-  .delete{
-    background: red;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
+  .deletes{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    
   }
   
   .stock-container{
