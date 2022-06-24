@@ -102,14 +102,16 @@ body{
 }
 
 .top-nav p{
-  margin:0px;
+  margin:0 25px 0 0;
   font-family: 'Inter';
   font-style: normal;
   font-size: 38px;
   color: #ffffff ;
-  text-decoration:underline;
   display: inline;
-
+  text-decoration:none;
+}
+.top-nav p:hover{
+  text-decoration:underline;
 }
 
 h2{
@@ -184,7 +186,7 @@ h2{
   height: 523px;
   margin: 3% 2.5% 4% 2.5%;
   background: #F7F7F7;
-  box-shadow: 4px 4px 23px -4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 23px -4px rgba(0, 0, 0, 0.5);
   border-radius: 24px;
   display: flex;
   flex-direction: column;
@@ -196,7 +198,7 @@ h2{
 }
 .card:hover{
   transform: scale(1.02) ;
-  box-shadow: 14px 14px 33px -4px rgba(0, 183, 255, 0.45);
+  box-shadow: 14px 14px 33px -4px rgb(97, 210, 255, 0.75);
 
 }
 

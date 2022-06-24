@@ -1,6 +1,8 @@
 <?php require_once("menu.php");
 require_once("functions.php");
-
+if( $_SESSION['session']['type'] == 'client'){
+    header("location:boutiquec.php");
+}
 if(count($_POST)>0){
     for($i=0; $i<$_POST['conf-numb'];$i++){
         ajoute_gâtrerie($_GET['id'],$_POST['conf-type']);
