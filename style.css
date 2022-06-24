@@ -68,6 +68,7 @@ body{
   width: 100%;
   margin: 0px;
   padding: 0px;
+  background: center/100% fixed url("media/bck1.png");
 
 }
 .boutique-container{
@@ -257,9 +258,10 @@ h2{
 }
 
 #deletes{
-  width: 40%;
+  width: 100%;
   display: flex;
   justify-content: center;
+  filter: invert(100%);
 }
 #deletes:hover{
   animation: trash infinite 0.5s;
@@ -276,7 +278,7 @@ h2{
   width: 5%  ;
 }
 .delete form{
-  width: 300%;
+  width: 100%;
 }
 .stock-container{
   width: 100%;
