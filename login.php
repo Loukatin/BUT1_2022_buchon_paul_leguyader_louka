@@ -22,7 +22,7 @@ else{
                         <input type="text" id="login" name="login" placeholder="Utilisateur" required>
                         <input type="text" id="password" name="password" placeholder="Mot de passe" required>
                         <input class="connexion" type="submit" value="Connexion">
-                        <a href='register.php'><p>S'inscrire</p></a>
+                        <a class="inscription" href='register.php'><p>S'inscrire</p></a>
                 </div>
             </div>   
         </form>

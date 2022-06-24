@@ -38,9 +38,9 @@ if(isset($_GET['add'])){
                                 }
                             ?>
                         </select>
-                        <p>Nombre </p>
+                        <p class=nombre> Nombre de confisseries : </p>
                         <input type="number" id="conf-numb" name="conf-numb" required>
-                        <input type="submit" value="Ajouter une confiserie">
+                        <input class=submitv type="submit" value="Ajouter une confiserie">
                     </div>
                 </form>
             </div>
