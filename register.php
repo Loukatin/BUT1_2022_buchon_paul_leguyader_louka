@@ -1,9 +1,11 @@
 <?php 
 require_once("header.php");
 require_once("functions.php");
+//Cette Partie du code est rappelé lorsque l'on clique sur s'inscrire pour traiter le formulaire'
+
 if(count($_POST)>0){
     add_user($_POST);
-    // header('location:register.php');
+    header('location:login.php');
 }
 ?>
         <div class="conteneur"> 

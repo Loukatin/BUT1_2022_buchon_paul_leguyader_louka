@@ -46,7 +46,7 @@ foreach($users as $index => $user) {
                         echo("</div>
                         <style>
                         #vcard".$user['id']."{
-                            box-shadow: 4px 4px 35px -4px rgba(0, 159, 255, 0.7);
+                            box-shadow: 4px 4px 35px -4px rgb(255, 215, 61) ;
                         }
                         </style>
                         ");
