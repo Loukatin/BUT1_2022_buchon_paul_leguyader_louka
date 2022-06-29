@@ -216,6 +216,13 @@ h2{
 
 .card p{
   margin: 0px;
+  color: #000000;
+}
+
+.top-number{
+  margin: 10px 0 0 10px;
+  font-size: 3ch;
+  font-weight: bold;
 }
 
 .card-titles{
@@ -223,13 +230,14 @@ h2{
   font-style: normal;
   font-weight: 400;
   font-size: 25px;
-  color: #B1B1B1;
+  color: #000000;
 }
 
 .titles-div{
   display: flex;
   flex-direction: column;
   padding: 20px 2% 0 2%;
+  margin: 4%;
 }
 
 .boutique-container form{
