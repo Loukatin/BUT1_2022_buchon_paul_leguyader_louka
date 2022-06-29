@@ -1,5 +1,8 @@
 <?php require_once("menu.php");
 require_once("functions.php");
+if( $_SESSION['session']['type'] == 'client'){
+    header("location:boutiquec.php");
+}
 $boutiques = get_boutiques();
 if(count($_POST)>0){
     if(isset($_POST['delete'])){

@@ -1,9 +1,11 @@
 <?php 
 require_once("header.php");
 require_once("functions.php");
+//Cette Partie du code est rappelé lorsque l'on clique sur se connecter pour vérifier si les logs existent
 if(isset($_POST['login'])&&isset($_POST['password'])){
     $_SESSION['session'] = checklogin($_POST['login'],$_POST['password']);
     if( $_SESSION['session'] != null){
+        // On redirige les utilisateurs en fonction de leur rôle
         if( $_SESSION['session']['type'] == 'gerant'){
             header("location:boutiquev.php");
         }

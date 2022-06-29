@@ -1,6 +1,7 @@
 <?php 
 require_once("menu.php");
 require_once("functions.php");
+// Page de boutique visible par les clients.
 $boutiques = get_boutiques();
 ?>
 <h2>Choisissez votre boutique</h2>
@@ -8,6 +9,7 @@ $boutiques = get_boutiques();
             <div class="menu-filter"></div>
             <div class="card-list">
                 <?php
+                    // Affichage des cartes des boutiques
                     foreach($boutiques as $index => $boutique) {
                         echo("
                         <a class='card' href=stockc.php?id='".$boutique['boutique_id']."'>
