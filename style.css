@@ -415,6 +415,10 @@ add-boutique div{
   color: #ffffff;
 }
 
+.usr-role.d{
+  background: #80082c;
+}
+
 .register{
   display: flex;
   width: 100%;
