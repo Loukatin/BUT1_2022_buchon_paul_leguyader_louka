@@ -75,34 +75,23 @@ function add_boutique_adresse($adresse,$data){
 }
 
 function delete_boutique($id){
-    global $DB;
-    $sql = " DELETE FROM adresses WHERE `adresse_id` =$id";
+    $sql = "DELETE FROM adresses WHERE `adresse_id` =$id";
     $sql2 = "DELETE FROM stocks WHERE `boutique_id` = $id";
     $sql3 = "DELETE FROM boutiques WHERE `boutique_id` = $id";
-    try {
-        $stmt = $DB->prepare($sql);
-        $stmt->execute();
-        $stmt2 = $DB->prepare($sql2);
-        $stmt2->execute();
-        $stmt3 = $DB->prepare($sql3);
-        $stmt3->execute();
-    } 
-    catch (Exception $ex) {
-        echo $ex->getMessage();
-    }
+    db_query($sql);
+    db_query($sql2);
+    db_query($sql3);
 }
 
 
 function compte_gâtrerie($idb,$idc){
-    $idc = intval($idc);
     $sql = "SELECT count(confiserie_id) FROM `stocks` WHERE confiserie_id = $idc AND boutique_id = $idb";
     return db_query($sql);
 }
 
 function ajoute_gâtrerie($idb,$idc){
-    $idc = intval($idc);
     $sql = "INSERT INTO stocks(date_de_peremption, date_de_mise_en_stock, boutique_id, confiserie_id) VALUES (NOW() + INTERVAL 14 DAY, NOW(), $idb, $idc);";
-    return db_query($sql);
+    db_query($sql);
 }
 
 function liste_gâterie_boutique($idb,$idc){
@@ -114,7 +103,7 @@ function supprime_gâtrerie($idb,$idc){
     $liste_gaterie = liste_gâterie_boutique($idb,$idc);
     if(count($liste_gaterie)>0){
         $sql = "DELETE FROM stocks WHERE `id` = ".$liste_gaterie[0]['id'];
-        return db_query($sql);
+        db_query($sql);
     }
 }
 

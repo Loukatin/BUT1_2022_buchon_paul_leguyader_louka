@@ -14,6 +14,7 @@ if(isset($_POST['login'])&&isset($_POST['password'])){
         }
     }    
 }
+// Si la page n'a pas été appelé depuis se connecter, on supprime la session enregistrée
 else{
     session_destroy();
 }

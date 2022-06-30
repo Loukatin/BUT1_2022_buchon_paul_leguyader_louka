@@ -1,14 +1,21 @@
-<?php require_once("menu.php");
+<?php 
+require_once("menu.php");
 require_once("functions.php");
+//Les clients ne peuvent y accéder
 if( $_SESSION['session']['type'] == 'client'){
     header("location:boutiquec.php");
 }
+
+//Cette variable sert à l'affichage de toutes les boutiques plus bas
 $boutiques = get_boutiques();
+
 if(count($_POST)>0){
+    //Ceci est éxecuté quand un utilisateur clique sur la poubelle à côté d'une boutique
     if(isset($_POST['delete'])){
         delete_boutique($_POST['delete']);
         header('location:boutiquev.php');
     }
+    //Ceci est éxecuté quand l'utilisateur rempli et envoie le formulaire d'ajout de boutique
     else{
         add_boutique([$_POST['name'],$_POST['nbstreet'],$_POST['street'],$_POST['codep'],$_POST['ville'],$_POST['pays']]);
         header('location:boutiquev.php');
@@ -37,6 +44,7 @@ if(count($_POST)>0){
                         <p>Pays: </p>
                         <select class='pays' name="pays" id="pet-select">
                             <?php 
+                                // Le code ne permet d'ajouter des boutique que dans les pays où il y a déjà des boutiques
                                 $already = [];
                                 foreach($boutiques as $index => $boutique){
                                     if(!in_array($boutique['pays'],$already))
@@ -51,12 +59,13 @@ if(count($_POST)>0){
             </div>
             <div class="card-list">
             <?php
+                    // Ce code permet d'afficher toutes les boutiques. Il y a à côté de chaque carte, une boutique pour supprimé cette boutiques
                     foreach($boutiques as $index => $boutique) {
                         echo("
                         <div class='ligne'>
                             <a class='card boutique-vendeur' href=stockv.php?id='".$boutique['boutique_id']."'>
                                 <div class='card-illustration'>
-                                    <img src='media/bonbon.jpg'>
+                                    <img src='media/boutique.png'>
                                 </div>
                                 <div class='info'>
                                     <div class='nom-boutique titles-div'>
@@ -76,7 +85,7 @@ if(count($_POST)>0){
                             <div class='delete'>
                                 <form name='formulaire' class='delete-form' action='' method='POST'>  
                                     <input type='hidden' type='numb' name='delete' value='".$boutique['boutique_id']."'>
-                                        <img id='deletes'src='trash.png'>
+                                        <img id='deletes'src='media/trash.png'>
                                     </input>
                                 </form>
                             </div>
@@ -88,6 +97,7 @@ if(count($_POST)>0){
         </div> 
 
         <script>
+            //Ceci permet l'envoie du formulaire de suppression lorsque l'on clique sur la poubelle
             let del = document.querySelectorAll('.delete')
             del.forEach(element => element.addEventListener('click',function(){
                 element.children[0].submit()

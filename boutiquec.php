@@ -15,7 +15,7 @@ $boutiques = get_boutiques();
                         <a class='card' href=stockc.php?id='".$boutique['boutique_id']."'>
                         <div>
                             <div class='card-illustration'>
-                                <img src='media/bonbon.jpg'>
+                                <img src='media/boutique.png'>
                             </div>
                             <div class='nom-boutique titles-div'>
                                 <p class='card-titles'>Nom boutique:</p>
