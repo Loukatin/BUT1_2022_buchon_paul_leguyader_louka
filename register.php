@@ -10,17 +10,17 @@ if(count($_POST)>0){
 ?>
         <div class="conteneur"> 
             <div class="register">
-                <form class="register" action="register.php" method="POST"> 
+                <form class="register0" action="register.php" method="POST"> 
                     <div class="nom-prenom">
-                        <input type="text" name="name" placeholder="Nom" required>
-                        <input type="text" name="firstname" placeholder="Prénom" required>
-                        <input type="date"  name="date" placeholder="Utilisateur" required>
+                        <input class="button" type="text" name="name" placeholder="Nom" required>
+                        <input class="button" type="text" name="firstname" placeholder="Prénom" required>
+                        <input class="button" type="date"  name="date" placeholder="Utilisateur" required>
                     </div>  
-                    <input type="text"  name="login" placeholder="Utilisateur" required>
-                    <input type="password"  name="password" placeholder="Mot de passe" required>
-                    <input  type="submit" value="Connexion">
-                    <input type="checkbox" name="gerant" value="gerant">
-                    <a href='login.php'><p>Connexion</p></a>
+                    <input class="button" type="text"  name="login" placeholder="Utilisateur" required>
+                    <input class="button" type="password"  name="password" placeholder="Mot de passe" required>
+                    <input class="button" type="submit" value="Connexion">
+                    <input class="button" type="checkbox" name="gerant" value="gerant">
+                    <a class="button1" href='login.php'><p>Connexion</p></a>
                 </form>
             </div>
         </div>   
