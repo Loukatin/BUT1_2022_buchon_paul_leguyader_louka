@@ -1,5 +1,12 @@
 <?php 
 require_once("menu.php");
+echo("
+<a href='boutiquev.php'>
+    <div>
+        <p class='button1 btb'>Retour aux boutiques</p>
+    </div>
+</a>  
+");
 require_once("functions.php");
 
 //On empêches les client d'accéder à cette page
