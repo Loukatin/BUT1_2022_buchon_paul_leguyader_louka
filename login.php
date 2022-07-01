@@ -14,6 +14,7 @@ if(isset($_POST['login'])&&isset($_POST['password'])){
         }
     }    
 }
+// Si la page n'a pas été appelé depuis se connecter, on supprime la session enregistrée
 else{
     session_destroy();
 }
@@ -24,7 +25,7 @@ else{
                         <input type="text" id="login" name="login" placeholder="Utilisateur" required>
                         <input type="text" id="password" name="password" placeholder="Mot de passe" required>
                         <input class="connexion" type="submit" value="Connexion">
-                        <a class="inscription" href='register.php'><p>S'inscrire</p></a>
+                        <a class="button1" href='register.php'><p>S'inscrire</p></a>
                 </div>
             </div>   
         </form>

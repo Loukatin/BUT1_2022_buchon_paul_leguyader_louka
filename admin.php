@@ -1,5 +1,12 @@
 <?php 
 require_once("menu.php");
+echo("
+<a href='boutiquev.php'>
+    <div>
+        <p class='button1 btb'>Retour aux boutiques</p>
+    </div>
+</a>  
+");
 require_once("functions.php");
 
 //On empêches les client d'accéder à cette page
@@ -38,15 +45,20 @@ foreach($users as $index => $user) {
                         else{
                             echo("<div id='vcard".$user['id']."' class='card user-card'>");
                         }
+                        $birth = $user['ddn'];
+                        $today = date("Y-m-d");
+                        $diff = date_diff(date_create($birth), date_create($today));
                         echo("
                                 <img class='img-rdm'src='https://picsum.photos/400/400?random'>
                                 <p>". $user['prenom']." <span style='color:#1b96d1;'>''".$user['username']."''</span> ".$user['nom']."</p>
-                                <p>".$user['ddn']."</p>");
+                                <p>".$user['ddn']."</p>
+                                <p>".$diff->format('%y')." ans</p>
+                            ");
                         if($user['type']=='client'){
-                            echo("<a href='?id=".$user['id']."'class='usr-role'>Promouvoir</a>");
+                            echo("<a href='?id=".$user['id']."'class='usr-role p'>Promouvoir</a>");
                         }
                         else{
-                            echo("<a href='?id=".$user['id']."' class='usr-role'>Dégrader</a>");
+                            echo("<a href='?id=".$user['id']."' class='usr-role d'>Dégrader</a>");
                         }
                         echo("</div>
                         <style>

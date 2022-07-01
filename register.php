@@ -18,8 +18,11 @@ if(count($_POST)>0){
                     </div>  
                     <input class="button" type="text"  name="login" placeholder="Utilisateur" required>
                     <input class="button" type="password"  name="password" placeholder="Mot de passe" required>
-                    <input class="button" type="submit" value="Connexion">
-                    <input class="button" type="checkbox" name="gerant" value="gerant">
+                    <input class="button registerb" type="submit" value="S'inscrire">
+                    <div class='cstyle'>
+                        <label for="gerant">Gérant:</label>
+                        <input class="button checkbox" type="checkbox" name="gerant" value="gerant">                        
+                    </div>
                     <a class="button1" href='login.php'><p>Connexion</p></a>
                 </form>
             </div>
