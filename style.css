@@ -224,10 +224,8 @@ h2{
   font-weight: bold;
 }
 
-.nom-boutique.titles-div
-{
+.nom-boutique.titles-div{
 display: flex;
-align-items: center;
 }
 
 .card-titles{
